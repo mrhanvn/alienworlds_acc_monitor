@@ -25,7 +25,7 @@ export default function Home(props) {
   const defaultAcc = props.urlAcc ? props.urlAcc : cookies.get("accounts") ? cookies.get("accounts") : []
   const [account, setAccount] = useState(defaultAcc)
   const [input, setInput] = useState("")
-  const genLink = props.urlAcc ? 'https://www.alienworlds.fun/?accounts='+btoa(JSON.stringify(props.urlAcc)) : cookies.get("accounts") ? 'https://www.alienworlds.fun/?accounts='+btoa(JSON.stringify(cookies.get("accounts"))) : "Please add some accounts first!"
+  const genLink = props.urlAcc ? 'https://www.alienworlds.fun/?accounts='+btoa(JSON.stringify(props.urlAcc)) : cookies.get("accounts") ? 'https://mrhanvn.netlify.app/?accounts='+btoa(JSON.stringify(cookies.get("accounts"))) : "Please add some accounts first!"
   const [link, setLink] = useState(genLink)
   const [copied, setCopied] = useState(false)
   const [totalTLM, setTotalTLM] = useState(0)
